@@ -1,0 +1,11 @@
+conf t
+int vlan 1
+ip address 192.168.100.1 255.255.255.0
+exit
+
+interface range gigabitethernet 1/0/2-3
+switchport mod access
+switchport access vlan 1
+
+end
+wr
