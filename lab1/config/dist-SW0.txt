@@ -68,11 +68,6 @@ interface range gigabitethernet 1/0/1-2
 channel-group 1 mode desirable
 
 interface port-channel 1
-no sw
-ip address 172.10.1.1 255.255.255.0
-no shut
-
-interface port-channel 1
 switchport mode trunk
 switchport trunk allow vlan all
 no shut
@@ -84,6 +79,7 @@ interface port-channel 2
 switchport mode trunk
 switchport trunk allow vlan all
 no shut
+
 interface range gigabitethernet 1/0/5-6
 channel-group 3 mode desirable
 

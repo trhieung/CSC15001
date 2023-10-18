@@ -7,20 +7,6 @@ channel-group 1 mode desirable
 vtp domain HCMUS1
 vtp mode client
 
-int vlan 10
-ip address 172.10.10.1 255.255.255.0
-ip helper-address 10.50.50.1
-no shut
-
-int vlan 11
-ip address 172.10.11.1 255.255.255.0
-no shut
-
-int vlan 12
-ip address 172.10.12.1 255.255.255.0
-no shut
-exit
-
 interface port-channel 1
 switchport mode trunk
 switchport trunk allow vlan all
