@@ -39,6 +39,7 @@ vtp mode server
 vlan 10
 name VLAN10
 interface vlan 10
+ip helper-add 10.50.50.254
 ip address 172.10.10.1 255.255.255.0
 no shut
 
