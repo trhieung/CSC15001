@@ -36,18 +36,6 @@ channel-group 2 mode desirable
 vtp domain HCMUS1
 vtp mode client
 
-int vlan 12
-ip address 172.10.12.1 255.255.255.0
-no shut
-
-int vlan 13
-ip address 172.10.13.1 255.255.255.0
-no shut
-
-int vlan 14
-ip address 172.10.14.1 255.255.255.0
-no shut
-
 interface port-channel 2
 switchport mode trunk
 switchport trunk allow vlan all
@@ -77,18 +65,6 @@ channel-group 3 mode desirable
 vtp domain HCMUS1
 vtp mode client
 
-int vlan 13
-ip address 172.10.13.1 255.255.255.0
-no shut
-
-int vlan 15
-ip address 172.10.15.1 255.255.255.0
-no shut
-
-int vlan 16
-ip address 172.10.16.1 255.255.255.0
-no shut
-
 interface port-channel 3
 switchport mode trunk
 switchport trunk allow vlan all
@@ -109,27 +85,14 @@ switchport access vlan 16
 end 
 wr
 
--------------------------SW1---------------------------
+-------------------------SW4---------------------------
 conf t
 
 int range FastEthernet 0/1-2
 channel-group 4 mode desirable
 
-vtp domain HCMUS1
+vtp domain HCMUS2
 vtp mode client
-
-int vlan 20
-ip address 172.20.20.1 255.255.255.0
-no shut
-
-int vlan 21
-ip address 172.20.21.1 255.255.255.0
-no shut
-
-int vlan 22
-ip address 172.20.22.1 255.255.255.0
-no shut
-exit
 
 interface port-channel 4
 switchport mode trunk
