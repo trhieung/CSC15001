@@ -1,8 +1,10 @@
-
-conf t
+conf t 
 
 vtp domain HCMUS1
 vtp mode server
+
+int vlan  1
+no shut
 
 vlan 10
 name VLAN10
@@ -59,8 +61,16 @@ switchport mode trunk
 switchport trunk allow vlan all
 no shut
 
+int vlan 1
+no shut
+
 interface range gigabitethernet 1/0/1-2
 channel-group 1 mode desirable
+
+interface port-channel 1
+no sw
+ip address 172.10.1.1 255.255.255.0
+no shut
 
 interface port-channel 1
 switchport mode trunk
@@ -85,7 +95,4 @@ no shut
 ip routing
 router ospf 1
 net 10.10.20.0 0.0.0.255 area 0
-net 172.10.0.0 0.0.255.255 area 1
-
-end
-wr
+net 172.10.1.0 0.0.0.255 area 1
