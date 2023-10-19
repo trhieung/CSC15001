@@ -39,42 +39,49 @@ vtp mode server
 vlan 20
 name VLAN20
 interface vlan 20
+ip helper-add 10.50.50.254
 ip address 172.20.20.1 255.255.255.0
 no shut
 
 vlan 21
 name VLAN21
 interface vlan 21
+ip helper-add 10.50.50.254
 ip address 172.20.21.1 255.255.255.0
 no shut
 
 vlan 22
 name VLAN22
 interface vlan 22
+ip helper-add 10.50.50.254
 ip address 172.20.22.1 255.255.255.0
 no shut
 
 vlan 23
 name VLAN23
 interface vlan 23
+ip helper-add 10.50.50.254
 ip address 172.20.23.1 255.255.255.0
 no shut
 
 vlan 24
 name VLAN24
 interface vlan 24
+ip helper-add 10.50.50.254
 ip address 172.20.24.1 255.255.255.0
 no shut
 
 vlan 25
 name VLAN25
 interface vlan 25
+ip helper-add 10.50.50.254
 ip address 172.20.25.1 255.255.255.0
 no shut
 
 vlan 26
 name VLAN26
 interface vlan 26
+ip helper-add 10.50.50.254
 ip address 172.20.26.1 255.255.255.0
 no shut
 

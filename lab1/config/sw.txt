@@ -123,18 +123,6 @@ channel-group 5 mode desirable
 vtp domain HCMUS2
 vtp mode client
 
-int vlan 23
-ip address 172.20.23.1 255.255.255.0
-no shut
-
-int vlan 24
-ip address 172.20.24.1 255.255.255.0
-no shut
-
-int vlan 25
-ip address 172.20.25.1 255.255.255.0
-no shut
-
 interface port-channel 5
 switchport mode trunk
 switchport trunk allow vlan all
@@ -163,18 +151,6 @@ channel-group 6 mode desirable
 
 vtp domain HCMUS2
 vtp mode client
-
-int vlan 20
-ip address 172.20.20.1 255.255.255.0
-no shut
-
-int vlan 23
-ip address 172.20.23.1 255.255.255.0
-no shut
-
-int vlan 26
-ip address 172.20.26.1 255.255.255.0
-no shut
 
 interface port-channel 6
 switchport mode trunk

@@ -46,36 +46,42 @@ no shut
 vlan 11
 name VLAN11
 interface vlan 11
+ip helper-add 10.50.50.254
 ip address 172.10.11.1 255.255.255.0
 no shut
 
 vlan 12
 name VLAN12
 interface vlan 12
+ip helper-add 10.50.50.254
 ip address 172.10.12.1 255.255.255.0
 no shut
 
 vlan 13
 name VLAN13
 interface vlan 13
+ip helper-add 10.50.50.254
 ip address 172.10.13.1 255.255.255.0
 no shut
 
 vlan 14
 name VLAN14
 interface vlan 14
+ip helper-add 10.50.50.254
 ip address 172.10.14.1 255.255.255.0
 no shut
 
 vlan 15
 name VLAN15
 interface vlan 15
+ip helper-add 10.50.50.254
 ip address 172.10.15.1 255.255.255.0
 no shut
 
 vlan 16
 name VLAN16
 interface vlan 16
+ip helper-add 10.50.50.254
 ip address 172.10.16.1 255.255.255.0
 no shut
 

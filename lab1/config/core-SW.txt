@@ -3,6 +3,10 @@ conf t
 vtp domain HCMUS
 vtp mode transparent
 
+int gigabitethernet1/0/1
+no sw
+ip add 10.10.10.2 255.255.255.0
+
 interface range gigabitethernet 1/0/23-24
 switchport mode trunk
 channel-group 13 mode desirable
@@ -48,9 +52,11 @@ no shut
 
 ip routing 
 router ospf 1
+net 10.10.10.0 0.0.0.255 area 0
 net 10.10.40.0 0.0.0.255 area 0
 net 10.10.30.0 0.0.0.255 area 0
 net 10.10.20.0 0.0.0.255 area 0
 
+ip default-gateway 10.10.10.2
 end
 wr
